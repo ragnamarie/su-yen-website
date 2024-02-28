@@ -11,10 +11,9 @@ export default function Layout({ children }) {
           height={138}
           alt="Logo"
         />
+        <Navigation></Navigation>
       </header>
-      <main>
-        {children} <Navigation></Navigation>
-      </main>
+      <main>{children}</main>
       <footer>
         <p>
           <small>hennings &copy;</small>
