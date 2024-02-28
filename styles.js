@@ -18,7 +18,9 @@ export default createGlobalStyle`
     display: flex;
     gap: 30%;
     min-width: 90vw;
-justify-content: space-between;
+    justify-content: space-between;
+    z-index: 10;
+    position: sticky;
   }
 
   body {
@@ -44,6 +46,11 @@ justify-content: space-between;
   a {
     text-decoration: none;
     font-weight: 700;
+    color: black;
+  }
+
+  h2 {
+    font-weight: 500;
     color: black;
   }
 
