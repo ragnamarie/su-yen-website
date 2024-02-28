@@ -1,20 +1,22 @@
 import Image from "next/image";
 import Navigation from "../Navigation";
+import Link from "next/link";
 
 export default function Layout({ children }) {
   return (
     <>
       <header>
-        <Image
-          src="/syhennings_light.png"
-          width={339}
-          height={138}
-          alt="Logo"
-        />
+        <Link href="/">
+          <Image
+            src="/syhennings_light.png"
+            width={339}
+            height={138}
+            alt="Logo"
+          />
+        </Link>
+        <Navigation></Navigation>
       </header>
-      <main>
-        {children} <Navigation></Navigation>
-      </main>
+      <main>{children}</main>
       <footer>
         <p>
           <small>hennings &copy;</small>

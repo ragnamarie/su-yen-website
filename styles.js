@@ -15,10 +15,13 @@ export default createGlobalStyle`
   }
 
   header {
-position: sticky;
-top: 0;
+    display: flex;
+    gap: 30%;
+    min-width: 90vw;
+    justify-content: space-between;
     z-index: 10;
-      } 
+    position: sticky;
+  }
 
   body {
     font-family: Aptos, Fallback, sans-serif;
@@ -31,7 +34,9 @@ top: 0;
   }
 
   ul {    
-    padding: 0;
+    display: flex;
+    gap: 30%;
+    padding-right: 5%;
   }
 
   li {
@@ -41,6 +46,11 @@ top: 0;
   a {
     text-decoration: none;
     font-weight: 700;
+    color: black;
+  }
+
+  h2 {
+    font-weight: 500;
     color: black;
   }
 
