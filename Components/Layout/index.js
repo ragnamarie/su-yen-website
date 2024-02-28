@@ -1,13 +1,23 @@
+import Image from "next/image";
+import Navigation from "../Navigation";
+
 export default function Layout({ children }) {
   return (
     <>
       <header>
-        <h1>SU-YEN HENNINGS</h1>
+        <Image
+          src="/syhennings_light.png"
+          width={339}
+          height={138}
+          alt="Logo"
+        />
       </header>
-      <main>{children}</main>
+      <main>
+        {children} <Navigation></Navigation>
+      </main>
       <footer>
         <p>
-          <small>su-yen hennings&copy;</small>
+          <small>hennings &copy;</small>
         </p>
       </footer>
     </>

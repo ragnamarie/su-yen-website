@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import Aptos from "/public/fonts/Aptos.ttf";
+import AptosTTF from "public/fonts/aptos-display-italic.ttf";
 
 export default createGlobalStyle`
   *,
@@ -14,10 +14,34 @@ export default createGlobalStyle`
     width: 100vh;
   }
 
+  header {
+position: sticky;
+top: 0;
+    z-index: 10;
+      } 
+
+  body {
+    font-family: Aptos, Fallback, sans-serif;
+  }
+
   @font-face {
-    font-family: 'YourFontName';
-    src: url(${Aptos}) format('truetype'), url(${Aptos}) format('tff');
+    font-family: 'Aptos';
+    src: url(${AptosTTF}) format('truetype');
     /* Add other font formats if needed */
-}
+  }
+
+  ul {    
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
+  }
 
 `;
