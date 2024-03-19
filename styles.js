@@ -33,10 +33,8 @@ export default createGlobalStyle`
     /* Add other font formats if needed */
   }
 
-  ul {    
-    display: flex;
-    gap: 30%;
-    padding-right: 5%;
+  ul {
+    display: grid;
   }
 
   li {
@@ -53,5 +51,4 @@ export default createGlobalStyle`
     font-weight: 500;
     color: black;
   }
-
 `;
