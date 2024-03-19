@@ -1,5 +1,7 @@
 import { useRouter } from "next/router";
 import styled from "styled-components";
+import Link from "next/link";
+import Image from "next/image";
 
 const StyledLink = styled.a`
   text-decoration: none;
@@ -29,20 +31,31 @@ export default function Navigation() {
   return (
     <ul>
       <li>
-        <StyledLink isActive={isPageActive("/works")} href="/works">
-          WORKS
-        </StyledLink>
-      </li>
-      <li>
-        <StyledLink isActive={isPageActive("/about")} href="/about">
-          ABOUT
-        </StyledLink>
-      </li>
-      <li>
-        <StyledLink isActive={isPageActive("/contact")} href="/contact">
-          CONTACT
-        </StyledLink>
+        <Link href="/">
+          <Image src="/hamburger.jpg" width={90} height={64} alt="Hamburger" />
+        </Link>
       </li>
     </ul>
   );
 }
+
+// OLD MENU
+// return (
+//   <ul>
+//     <li>
+//       <StyledLink isActive={isPageActive("/works")} href="/works">
+//         WORKS
+//       </StyledLink>
+//     </li>
+//     <li>
+//       <StyledLink isActive={isPageActive("/about")} href="/about">
+//         ABOUT
+//       </StyledLink>
+//     </li>
+//     <li>
+//       <StyledLink isActive={isPageActive("/contact")} href="/contact">
+//         CONTACT
+//       </StyledLink>
+//     </li>
+//   </ul>
+// );

@@ -17,7 +17,7 @@ export default createGlobalStyle`
   header {
     display: flex;
     gap: 30%;
-    min-width: 90vw;
+    min-width: 100vw;
     justify-content: space-between;
     z-index: 10;
     position: sticky;
