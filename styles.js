@@ -21,16 +21,11 @@ export default createGlobalStyle`
     justify-content: space-between;
     z-index: 10;
     position: sticky;
+    padding: 30px;
   }
 
   body {
     font-family: Aptos, Fallback, sans-serif;
-  }
-
-  @font-face {
-    font-family: 'Aptos';
-    src: url(${AptosTTF}) format('truetype');
-    /* Add other font formats if needed */
   }
 
   ul {
@@ -39,6 +34,8 @@ export default createGlobalStyle`
 
   li {
     list-style-type: none;
+    font-weight: 700;
+    font-size: 24px;
   }
 
   a {

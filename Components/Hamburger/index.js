@@ -36,8 +36,8 @@ const Overlay = styled.div`
   background-size: cover;
   background-position: center;
   z-index: 100;
-  transition: top 1.5s ease, opacity 1.5s ease; /* Add transition effect for top and opacity */
-  opacity: ${(props) => (props.isOpen ? "1" : "0")};
+  transition: top 1s ease, bottom 1s ease; /* Add transition effect for top and opacity */
+  bottom: ${(props) => (props.isOpen ? "1" : "0")};
   pointer-events: ${(props) => (props.isOpen ? "auto" : "none")};
 `;
 
@@ -62,23 +62,17 @@ export default function Hamburger() {
           <ul>
             <li>
               <h1>
-                <StyledLink onClick={toggleMenu} href="/works">
-                  WORKS
-                </StyledLink>
+                <StyledLink href="/works">WORKS</StyledLink>
               </h1>
             </li>
             <li>
               <h1>
-                <StyledLink onClick={toggleMenu} href="/about">
-                  ABOUT
-                </StyledLink>
+                <StyledLink href="/about">ABOUT</StyledLink>
               </h1>
             </li>
             <li>
               <h1>
-                <StyledLink onClick={toggleMenu} href="/contact">
-                  CONTACT
-                </StyledLink>
+                <StyledLink href="/contact">CONTACT</StyledLink>
               </h1>
             </li>
           </ul>
@@ -92,7 +86,7 @@ export default function Hamburger() {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
+              strokeWidth="2"
             >
               <line x1="18" y1="6" x2="6" y2="18"></line>
               <line x1="6" y1="6" x2="18" y2="18"></line>

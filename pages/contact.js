@@ -1,20 +1,21 @@
-import Link from "next/link";
+import { useState } from "react";
 import Image from "next/image";
-
-// export default function ContactPage() {
-//   return (
-//     <>
-//       <Image src="/motorola.png" width={800} height={482} alt="Contact" />
-//       <h2>kiss me thru the phone: 678-999-8212</h2>
-//     </>
-//   );
-// }
+import Contacts from "@/Components/Contacts";
 
 export default function ContactPage() {
+  const [isButtonClicked, setButtonClicked] = useState(false);
+
+  function handleButtonClick() {
+    // Toggle the value of isButtonClicked
+    setButtonClicked((prevValue) => !prevValue);
+    console.log("Button clicked");
+  }
+
   return (
-    <div style={{ position: "relative", width: 610, height: 366 }}>
-      <Link href="/link1">
+    <>
+      <div style={{ position: "relative", width: 610, height: 366 }}>
         <div
+          onClick={handleButtonClick}
           style={{
             position: "absolute",
             clipPath:
@@ -24,9 +25,11 @@ export default function ContactPage() {
             cursor: "pointer", // Optional: Change cursor to indicate clickability
           }}
         />
-      </Link>
-      {/* Add more clickable elements as needed */}
-      <Image src="/motorola.png" width={610} height={366} alt="Contact" />
-    </div>
+
+        {/* Add more clickable elements as needed */}
+        <Image src="/motorola.png" width={610} height={366} alt="Contact" />
+      </div>
+      {isButtonClicked && <Contacts />}
+    </>
   );
 }
