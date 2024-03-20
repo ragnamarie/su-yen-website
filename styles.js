@@ -16,7 +16,6 @@ export default createGlobalStyle`
   header {
     display: flex;
     gap: 30%;
-    min-width: 100vw;
     justify-content: space-between;
     z-index: 10;
     position: sticky;
@@ -24,9 +23,9 @@ export default createGlobalStyle`
   }
 
   body {
-    font-family: Aptos, Fallback, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     height: 100vh;
-    width: 100%;
+    max-width: 100%;
   }
 
   ul {
@@ -49,17 +48,5 @@ export default createGlobalStyle`
   h2 {
     font-weight: 500;
     color: black;
-  }
-
-  @media only screen and (max-width: 428px) and (min-width: 414px) {
-    /* Adjust styles for iPhone 14 Plus */
-    /* Example styles */
-    header {
-      gap: 5%; /* Adjust the gap between elements */
-      padding: 20px; /* Adjust padding */
-    }
-    li {
-      font-size: 20px; /* Adjust font size */
-    }
   }
 `;
