@@ -11,7 +11,7 @@ export default createGlobalStyle`
   #__next {
     margin: 0;
     height: 100vh;
-    width: 100vh;
+    width: 100%;
   }
 
   header {
@@ -26,10 +26,13 @@ export default createGlobalStyle`
 
   body {
     font-family: Aptos, Fallback, sans-serif;
+    height: 100vh;
+    width: 100%;
   }
 
   ul {
     display: grid;
+    justify-content: center;
   }
 
   li {
