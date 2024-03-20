@@ -62,17 +62,17 @@ export default function Hamburger() {
           <ul>
             <li>
               <h1>
+                <StyledLink href="/">HOME</StyledLink>
+              </h1>
+            </li>
+            <li>
+              <h1>
                 <StyledLink href="/works">WORKS</StyledLink>
               </h1>
             </li>
             <li>
               <h1>
                 <StyledLink href="/about">ABOUT</StyledLink>
-              </h1>
-            </li>
-            <li>
-              <h1>
-                <StyledLink href="/contact">CONTACT</StyledLink>
               </h1>
             </li>
           </ul>
