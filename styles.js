@@ -51,14 +51,15 @@ export default createGlobalStyle`
     color: black;
   }
 
-  @media only screen and (max-width: 768px) {
-    /* Adjust styles for screens up to 768px wide (e.g., iPhones) */
+  @media only screen and (max-width: 428px) and (min-width: 414px) {
+    /* Adjust styles for iPhone 14 Plus */
+    /* Example styles */
     header {
-      gap: 10%; /* Adjust the gap between elements */
-      padding: 10px; /* Adjust padding */
+      gap: 5%; /* Adjust the gap between elements */
+      padding: 20px; /* Adjust padding */
     }
     li {
-      font-size: 18px; /* Adjust font size */
+      font-size: 20px; /* Adjust font size */
     }
   }
 `;
