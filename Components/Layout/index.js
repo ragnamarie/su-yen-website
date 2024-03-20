@@ -12,6 +12,7 @@ export default function Layout({ children }) {
             width={339}
             height={138}
             alt="Logo"
+            style={{ width: "100%", height: "auto" }}
           />
         </Link>
         <Navigation></Navigation>

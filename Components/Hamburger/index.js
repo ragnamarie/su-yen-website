@@ -56,6 +56,7 @@ export default function Hamburger() {
         width={90}
         height={64}
         alt="Hamburger"
+        style={{ width: "100%", height: "auto" }}
       />
       <Overlay isOpen={isOpen}>
         <Container>

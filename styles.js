@@ -9,8 +9,8 @@ export default createGlobalStyle`
 
   #__next {
     margin: 0;
-    height: 100vh;
-    width: 100%;
+    min-height: 100vh;
+    min-width: 100vw;
   }
 
   header {
@@ -20,6 +20,7 @@ export default createGlobalStyle`
     z-index: 10;
     position: sticky;
     padding: 30px;
+    min-width: 100vw;
   }
 
   body {
@@ -49,4 +50,6 @@ export default createGlobalStyle`
     font-weight: 500;
     color: black;
   }
+
+
 `;
