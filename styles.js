@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import AptosTTF from "public/fonts/aptos-display-italic.ttf";
 
 export default createGlobalStyle`
   *,
@@ -50,5 +49,16 @@ export default createGlobalStyle`
   h2 {
     font-weight: 500;
     color: black;
+  }
+
+  @media only screen and (max-width: 768px) {
+    /* Adjust styles for screens up to 768px wide (e.g., iPhones) */
+    header {
+      gap: 10%; /* Adjust the gap between elements */
+      padding: 10px; /* Adjust padding */
+    }
+    li {
+      font-size: 18px; /* Adjust font size */
+    }
   }
 `;
