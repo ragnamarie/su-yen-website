@@ -31,7 +31,6 @@ export default createGlobalStyle`
 
   ul {
     display: grid;
-    justify-content: center;
   }
 
   li {
