@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Link from "next/link";
 
 const StyledList = styled.ul`
   display: flex;
@@ -13,21 +14,39 @@ const StyledListItem = styled.li`
   font-size: 20px;
 `;
 
-export default function Contacts() {
+const EditButton = styled.span`
+  position: relative;
+  color: white;
+  background-color: black;
+  font-size: 12px;
+  font-family: Futura;
+  font-weight: 700;
+  word-wrap: break-word;
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
+`;
+
+export default function Contacts({ contacts }) {
   return (
-    <StyledList>
-      <StyledListItem>
-        <u>💱phone</u> 678-999-8212
-      </StyledListItem>
-      <StyledListItem>
-        <u>💱mail</u> syyyy@hennings.com
-      </StyledListItem>
-      <StyledListItem>
-        <u>💱insta</u> princesssss
-      </StyledListItem>
-      <StyledListItem>
-        <u>💱tiktok</u> syyyyck
-      </StyledListItem>
-    </StyledList>
+    <>
+      <StyledList>
+        <StyledListItem>
+          <u>💱phone</u> {contacts.phone}
+        </StyledListItem>
+        <StyledListItem>
+          <u>💱mail</u> {contacts.mail}
+        </StyledListItem>
+        <StyledListItem>
+          <u>💱instagram</u> {contacts.instagram}
+        </StyledListItem>
+        <StyledListItem>
+          <u>💱tiktok</u> {contacts.tiktok}
+        </StyledListItem>
+        <Link href="/editcontact">
+          <button>EDIT CONTACT INFO</button>
+        </Link>
+      </StyledList>
+    </>
   );
 }
