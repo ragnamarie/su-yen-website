@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ContactForm from "../ContactForm";
+import Link from "next/link";
 
 const StyledList = styled.ul`
   display: flex;
@@ -14,6 +14,19 @@ const StyledListItem = styled.li`
   font-size: 20px;
 `;
 
+const EditButton = styled.span`
+  position: relative;
+  color: white;
+  background-color: black;
+  font-size: 12px;
+  font-family: Futura;
+  font-weight: 700;
+  word-wrap: break-word;
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
+`;
+
 export default function Contacts({ contacts }) {
   return (
     <>
@@ -25,13 +38,15 @@ export default function Contacts({ contacts }) {
           <u>💱mail</u> {contacts.mail}
         </StyledListItem>
         <StyledListItem>
-          <u>💱insta</u> {contacts.instagram}
+          <u>💱instagram</u> {contacts.instagram}
         </StyledListItem>
         <StyledListItem>
           <u>💱tiktok</u> {contacts.tiktok}
         </StyledListItem>
+        <Link href="/editcontact">
+          <button>EDIT CONTACT INFO</button>
+        </Link>
       </StyledList>
-      <ContactForm contacts={contacts} />
     </>
   );
 }

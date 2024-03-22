@@ -2,9 +2,9 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/contact": "pages/contact.js",
+  "/editcontact": "pages/editcontact.js",
+  "/api/contacts": "pages/api/contacts.js",
   "/": "pages/index.js",
-  "/api/contacts/[id]": "pages/api/contacts/[id].js",
-  "/works": "pages/works.js",
-  "/api/contacts": "pages/api/contacts.js"
+  "/contact": "pages/contact.js",
+  "/api/contacts/[id]": "pages/api/contacts/[id].js"
 }

@@ -32,10 +32,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/contact.js"
     ],
-    "/works": [
+    "/editcontact": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/works.js"
+      "static/chunks/pages/editcontact.js"
     ]
   },
   "ampFirstPages": []

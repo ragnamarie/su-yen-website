@@ -1,5 +1,19 @@
 import useSWR from "swr";
 import { useRouter } from "next/router";
+import styled from "styled-components";
+
+const StyledList = styled.ul`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-right: 40px;
+`;
+
+const StyledListItem = styled.li`
+  font-weight: 700;
+  font-size: 20px;
+`;
 
 export default function ContactForm({ contacts }) {
   const router = useRouter();
@@ -26,40 +40,57 @@ export default function ContactForm({ contacts }) {
 
     if (response.ok) {
       mutate();
+      router.push("/contact");
     }
     console.log("submitted");
   }
   return (
     <form onSubmit={handleEdit}>
-      <label htmlFor="phone-input"></label>
-      <input
-        type="text"
-        id="phone-input"
-        name="phone"
-        defaultValue={contacts.phone}
-      />
-      <label htmlFor="mail-input"></label>
-      <input
-        type="mail"
-        id="mail-input"
-        name="mail"
-        defaultValue={contacts.mail}
-      />
-      <label htmlFor="instagram-input"></label>
-      <input
-        type="text"
-        id="instagram-input"
-        name="instagram"
-        defaultValue={contacts.instagram}
-      />
-      <label htmlFor="tiktok-input"></label>
-      <input
-        type="text"
-        id="tiktok-input"
-        name="tiktok"
-        defaultValue={contacts.tiktok}
-      />
-      <button type="submit">Submit</button>
+      <StyledList>
+        <StyledListItem>
+          <label htmlFor="phone-input">
+            <u>💱phone</u>
+          </label>
+          <input
+            type="text"
+            id="phone-input"
+            name="phone"
+            defaultValue={contacts.phone}
+          />
+        </StyledListItem>
+        <StyledListItem>
+          <label htmlFor="mail-input">💱mail</label>
+          <input
+            type="mail"
+            id="mail-input"
+            name="mail"
+            defaultValue={contacts.mail}
+          />
+        </StyledListItem>
+        <StyledListItem>
+          <label htmlFor="instagram-input">
+            <u>💱instagram</u>
+          </label>
+          <input
+            type="text"
+            id="instagram-input"
+            name="instagram"
+            defaultValue={contacts.instagram}
+          />
+        </StyledListItem>
+        <StyledListItem>
+          <label htmlFor="tiktok-input">
+            <u>💱tiktok</u>
+          </label>
+          <input
+            type="text"
+            id="tiktok-input"
+            name="tiktok"
+            defaultValue={contacts.tiktok}
+          />
+        </StyledListItem>
+        <button type="submit">SUBMIT</button>
+      </StyledList>
     </form>
   );
 }
