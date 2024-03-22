@@ -13,20 +13,20 @@ const StyledListItem = styled.li`
   font-size: 20px;
 `;
 
-export default function Contacts() {
+export default function Contacts({ contacts }) {
   return (
     <StyledList>
       <StyledListItem>
-        <u>💱phone</u> 678-999-8212
+        <u>💱phone</u> {contacts.phone}
       </StyledListItem>
       <StyledListItem>
-        <u>💱mail</u> syyyy@hennings.com
+        <u>💱mail</u> {contacts.mail}
       </StyledListItem>
       <StyledListItem>
-        <u>💱insta</u> princesssss
+        <u>💱insta</u> {contacts.instagram}
       </StyledListItem>
       <StyledListItem>
-        <u>💱tiktok</u> syyyyck
+        <u>💱tiktok</u> {contacts.tiktok}
       </StyledListItem>
     </StyledList>
   );
