@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Navigation from "../Navigation";
 import Link from "next/link";
+import styled from "styled-components";
 
 export default function Layout({ children }) {
   return (
@@ -22,6 +23,9 @@ export default function Layout({ children }) {
         <p>
           <small>hennings &copy;</small>
         </p>
+        <small>
+          <Link href="/login">admin login</Link>
+        </small>
       </footer>
     </>
   );

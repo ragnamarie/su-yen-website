@@ -29,6 +29,12 @@ export default createGlobalStyle`
     max-width: 100%;
   }
 
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  } 
+
   ul {
     display: grid;
   }
@@ -48,6 +54,10 @@ export default createGlobalStyle`
   h2 {
     font-weight: 500;
     color: black;
+  }
+  
+  p {
+    margin: 0;
   }
 
 

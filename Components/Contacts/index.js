@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
+import { useSession } from "next-auth/react";
 
 const StyledList = styled.ul`
   display: flex;
@@ -28,6 +29,8 @@ const EditButton = styled.span`
 `;
 
 export default function Contacts({ contacts }) {
+  const { data: session, status } = useSession();
+
   return (
     <>
       <StyledList>
@@ -43,9 +46,11 @@ export default function Contacts({ contacts }) {
         <StyledListItem>
           <u>💱tiktok</u> {contacts.tiktok}
         </StyledListItem>
-        <Link href="/editcontact">
-          <button>EDIT CONTACT INFO</button>
-        </Link>
+        {session && (
+          <Link href="/editcontact">
+            <button>EDIT CONTACT INFO</button>
+          </Link>
+        )}
       </StyledList>
     </>
   );
