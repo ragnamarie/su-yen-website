@@ -24,7 +24,7 @@ export default function Layout({ children }) {
           <small>hennings &copy;</small>
         </p>
         <small>
-          <Link href="/login">admin login</Link>
+          <Link href="/login">💱 💱 💱</Link>
         </small>
       </footer>
     </>

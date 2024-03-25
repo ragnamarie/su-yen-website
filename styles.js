@@ -32,7 +32,10 @@ export default createGlobalStyle`
   footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between;    
+    height: 100vh;
+    max-width: 100%;
+    padding: 5px;
   } 
 
   ul {
