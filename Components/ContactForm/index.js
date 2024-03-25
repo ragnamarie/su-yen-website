@@ -1,6 +1,7 @@
 import useSWR from "swr";
 import { useRouter } from "next/router";
 import styled from "styled-components";
+import { useSession } from "next-auth/react";
 
 const StyledList = styled.ul`
   display: flex;
@@ -16,6 +17,7 @@ const StyledListItem = styled.li`
 `;
 
 export default function ContactForm({ contacts }) {
+  const { data: session, status } = useSession();
   const router = useRouter();
   const id = contacts._id;
   console.log(id);
@@ -43,6 +45,11 @@ export default function ContactForm({ contacts }) {
       router.push("/contact");
     }
     console.log("submitted");
+  }
+
+  if (!session) {
+    // If session is not available, return null or any other component to indicate that the ContactForm should not be rendered
+    return <p>you are not signed in.</p>;
   }
   return (
     <form onSubmit={handleEdit}>

@@ -27,7 +27,7 @@ const findOid = (keyData, oid, from = 0) => {
         oid.unshift(oid.length);
         oid.unshift(0x06);
     }
-    let i = keyData.indexOf(oid[0], from);
+    const i = keyData.indexOf(oid[0], from);
     if (i === -1)
         return false;
     const sub = keyData.subarray(i, i + oid.length);
@@ -122,10 +122,10 @@ export const fromSPKI = (pem, alg, options) => {
     return genericImport(/(?:-----(?:BEGIN|END) PUBLIC KEY-----|\s)/g, 'spki', pem, alg, options);
 };
 function getElement(seq) {
-    let result = [];
+    const result = [];
     let next = 0;
     while (next < seq.length) {
-        let nextPart = parseElement(seq.subarray(next));
+        const nextPart = parseElement(seq.subarray(next));
         result.push(nextPart);
         next += nextPart.byteLength;
     }
@@ -165,7 +165,7 @@ function parseElement(bytes) {
         };
     }
     else {
-        let numberOfDigits = bytes[position] & 0x7f;
+        const numberOfDigits = bytes[position] & 0x7f;
         position++;
         length = 0;
         for (let i = 0; i < numberOfDigits; i++) {

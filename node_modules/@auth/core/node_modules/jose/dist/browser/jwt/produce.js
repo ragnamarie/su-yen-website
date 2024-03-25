@@ -61,6 +61,12 @@ export class ProduceJWT {
         else if (input instanceof Date) {
             this._payload = { ...this._payload, iat: validateInput('setIssuedAt', epoch(input)) };
         }
+        else if (typeof input === 'string') {
+            this._payload = {
+                ...this._payload,
+                iat: validateInput('setIssuedAt', epoch(new Date()) + secs(input)),
+            };
+        }
         else {
             this._payload = { ...this._payload, iat: validateInput('setIssuedAt', input) };
         }
