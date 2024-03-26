@@ -19,7 +19,7 @@ export default createGlobalStyle`
     justify-content: space-between;
     z-index: 10;
     position: sticky;
-    padding: 30px;
+    padding: 20px;
     min-width: 100vw;
 
   }
@@ -32,6 +32,7 @@ export default createGlobalStyle`
 
   main {
     min-width: 100vw;
+    padding: 20px;
   }
 
   footer {
