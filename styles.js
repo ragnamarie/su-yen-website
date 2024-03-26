@@ -9,8 +9,8 @@ export default createGlobalStyle`
 
   #__next {
     margin: 0;
-    min-height: 100vh;
-    min-width: 100vw;
+    min-height: 100%;
+    min-width: 100%;
   }
 
   header {
@@ -19,23 +19,30 @@ export default createGlobalStyle`
     justify-content: space-between;
     z-index: 10;
     position: sticky;
-    padding: 30px;
+    padding: 20px;
     min-width: 100vw;
+
   }
 
   body {
     font-family: Helvetica, Arial, sans-serif;
-    height: 100vh;
-    max-width: 100%;
+    height: 100%;
+    width: 100%;
+  }
+
+  main {
+    min-width: 100vw;
+    padding: 20px;
   }
 
   footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;    
-    height: 100vh;
-    max-width: 100%;
     padding: 20px;
+    position: fixed;
+    bottom: 0;
+    min-width: 100vw;
   } 
 
   ul {

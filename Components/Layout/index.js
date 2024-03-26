@@ -22,9 +22,9 @@ export default function Layout({ children }) {
         <p>
           <small>hennings &copy;</small>
         </p>
-        <small>
+        <p>
           <Link href="/login">💱 💱 💱</Link>
-        </small>
+        </p>
       </footer>
     </>
   );
