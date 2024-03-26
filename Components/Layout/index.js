@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Navigation from "../Navigation";
 import Link from "next/link";
-import styled from "styled-components";
 
 export default function Layout({ children }) {
   return (
