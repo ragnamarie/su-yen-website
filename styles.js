@@ -35,7 +35,7 @@ export default createGlobalStyle`
     justify-content: space-between;    
     height: 100vh;
     max-width: 100%;
-    padding: 5px;
+    padding: 20px;
   } 
 
   ul {
@@ -59,9 +59,7 @@ export default createGlobalStyle`
     color: black;
   }
   
-  p {
-    margin: 0;
-  }
+
 
 
 `;
