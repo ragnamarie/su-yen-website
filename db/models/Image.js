@@ -9,6 +9,7 @@ export const imageSchema = new Schema({
   mimetype: String,
   size: Number,
   binaryData: Buffer,
+  name: String,
 });
 
 export const Image = models.Image || mongoose.model("Image", imageSchema);
