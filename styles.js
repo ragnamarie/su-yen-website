@@ -40,7 +40,6 @@ export default createGlobalStyle`
     flex-direction: row;
     justify-content: space-between;    
     padding: 20px;
-    position: fixed;
     bottom: 0;
     min-width: 100vw;
   } 

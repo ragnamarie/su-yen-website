@@ -16,9 +16,14 @@ export function ImageUploader() {
           id=""
           onChange={(event) => onChange(event, setFileData)}
         />
-        <label htmlFor="name-input">💱name</label>
-        <input type="name" id="name-input" name="name" defaultValue="tba" />
-        <button>Upload</button>
+        <label htmlFor="artName-input">💱name</label>
+        <input
+          type="artName"
+          id="artName-input"
+          name="artName"
+          defaultValue="tba"
+        />
+        <button>upload</button>
       </form>
     </>
   );

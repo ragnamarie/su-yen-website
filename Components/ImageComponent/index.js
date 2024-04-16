@@ -6,11 +6,9 @@ export function ImageComponent({ image }) {
       <img
         alt=""
         src={image.src}
-        fill={false}
-        width={300}
-        height={100}
-        style={{ objectFit: "contain" }}
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        fill={true}
+        layout="responsive"
+        style={{ width: "100%", height: "auto" }}
         priority={true}
       />
     </div>
