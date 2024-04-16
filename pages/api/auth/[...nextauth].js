@@ -50,6 +50,7 @@ export default NextAuth({
     }),
   ],
 
+  secret: process.env.JWT_SECRET,
   adapter: MongoDBAdapter(clientPromise),
 
   callbacks: {
@@ -63,6 +64,4 @@ export default NextAuth({
       return session;
     },
   },
-
-  secret: process.env.JWT_SECRET,
 });
