@@ -1,4 +1,6 @@
 export async function uploadFile(url, { arg }) {
+  console.log(url);
+  console.log(arg);
   await fetch(url, {
     method: "POST",
     headers: {
@@ -12,6 +14,7 @@ export async function uploadFile(url, { arg }) {
 
 export async function onChange(event, setFileData) {
   const file = (event.currentTarget.files || [])[0];
+  console.log(file);
 
   if (file) {
     setFileData({
