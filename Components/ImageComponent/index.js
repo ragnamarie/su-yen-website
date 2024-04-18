@@ -19,6 +19,9 @@ export function ImageComponent({ image }) {
 
   return (
     <div className={`w-64 h-32 relative`}>
+      <button onClick={() => handleDelete(image._id, image.originalFilename)}>
+        <span role="img">delete this one</span>
+      </button>
       <img
         alt=""
         src={image.src}
@@ -27,11 +30,6 @@ export function ImageComponent({ image }) {
         style={{ width: "100%", height: "auto" }}
         priority={true}
       />
-      <button onClick={() => handleDelete(image._id, image.originalFilename)}>
-        <span role="img" aria-label="A cross indicating deletion">
-          ❌
-        </span>
-      </button>
     </div>
   );
 }
