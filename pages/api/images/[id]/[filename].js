@@ -12,4 +12,10 @@ export default async function handler(req, res) {
   res.appendHeader("Content-Length", image.size);
 
   res.status(200).send(image.binaryData);
+
+  if (req.method === "DELETE") {
+    await Image.findByIdAndDelete(id);
+
+    response.status(200).json({ message: "Success!" });
+  }
 }
