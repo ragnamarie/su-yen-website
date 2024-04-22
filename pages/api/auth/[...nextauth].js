@@ -3,6 +3,12 @@ import GoogleProvider from "next-auth/providers/google";
 import { MongoDBAdapter } from "@auth/mongodb-adapter";
 import clientPromise from "@/db/mongodb";
 
+// Define the allowed email addresses
+const allowedEmails = [
+  "ragna.steinboemer@gmail.com",
+  // Add more email addresses here
+];
+
 export default NextAuth({
   providers: [
     GoogleProvider({
@@ -17,11 +23,8 @@ export default NextAuth({
       console.log("acc:", account);
       console.log("user:", user.user.email);
 
-      // Check if the email matches the specific email address you want to allow
-      // for now I can only set this one email because of how I select the user property in the database.
-      // This only works if there is only one object in the array.
-      const allowedEmail = "ragna.steinboemer@gmail.com"; // Change this to your specific email address. Database needs update too then./
-      if (user.user.email !== allowedEmail) {
+      // Check if the email matches any of the allowed email addresses
+      if (!allowedEmails.includes(user.user.email)) {
         // If the email doesn't match, return false to prevent sign-in
         return false;
       }

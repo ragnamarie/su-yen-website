@@ -10,6 +10,7 @@ export const imageSchema = new Schema({
   size: Number,
   binaryData: Buffer,
   title: String,
+  description: String,
 });
 
 export const Image = models.Image || mongoose.model("Image", imageSchema);
