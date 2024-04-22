@@ -1,6 +1,9 @@
 export async function uploadFile(url, { arg }) {
   console.log(url);
   console.log(arg);
+
+  arg.title = "Title";
+
   await fetch(url, {
     method: "POST",
     headers: {
@@ -27,6 +30,7 @@ export async function onChange(event, setFileData) {
 }
 
 export async function onSubmit(event, fileData, trigger) {
+  console.log(fileData);
   event.preventDefault();
   if (!fileData) {
     return;
