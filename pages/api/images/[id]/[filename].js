@@ -18,4 +18,12 @@ export default async function handler(req, res) {
 
     response.status(200).json({ message: "Success!" });
   }
+
+  if (req.method === "PATCH") {
+    await Image.findByIdAndUpdate(id, {
+      $set: req.body,
+    });
+
+    response.status(200).json({ message: "Success!" });
+  }
 }
