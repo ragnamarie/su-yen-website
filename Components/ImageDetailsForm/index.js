@@ -5,14 +5,23 @@ export function ImageDetailsForm({ onEditDetails, image }) {
         onEditDetails(event, image._id, image.originalFilename)
       }
     >
-      <label htmlFor="artName-input">💱name</label>
+      <label htmlFor="title-input">💱title</label>
       <input
         type="text"
         id="title-input"
         name="title"
-        defaultValue="please type title"
+        defaultValue={image.title}
       />
-      <button>add name</button>
+      <label htmlFor="description-input">💱description</label>
+      <textarea
+        type="text"
+        id="title-input"
+        name="description"
+        defaultValue={image.description}
+        rows="10"
+        cols="30"
+      />
+      <button>save changes</button>
     </form>
   );
 }

@@ -21,7 +21,7 @@ export function ImageComponent({ image }) {
       return;
     }
 
-    router.push("/");
+    router.push("/confirmation");
   }
 
   async function handleEditDetails(event, id, filename) {
@@ -30,6 +30,7 @@ export function ImageComponent({ image }) {
 
     const formData = new FormData(event.target);
     const title = formData.get("title");
+    const description = formData.get("description");
 
     const response = await fetch(`/api/images/${id}/${filename}`, {
       method: "PATCH",
@@ -39,12 +40,15 @@ export function ImageComponent({ image }) {
       body: JSON.stringify({
         ...imageData,
         title: title,
+        description: description,
       }),
     });
 
     if (response.ok) {
       mutate();
     }
+
+    router.push("/confirmation");
   }
 
   return (
@@ -62,7 +66,11 @@ export function ImageComponent({ image }) {
         style={{ width: "100%", height: "auto" }}
         priority={true}
       />
-      <ImageDetailsForm onEditDetails={handleEditDetails} image={image} />
+      <div>{image.title}</div>
+      <div>{image.description}</div>
+      {session && (
+        <ImageDetailsForm onEditDetails={handleEditDetails} image={image} />
+      )}
     </div>
   );
 }
