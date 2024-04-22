@@ -6,6 +6,7 @@ import clientPromise from "@/db/mongodb";
 // Define the allowed email addresses
 const allowedEmails = [
   "ragna.steinboemer@gmail.com",
+  "su11111yen@gmail.com",
   // Add more email addresses here
 ];
 
