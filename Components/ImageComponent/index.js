@@ -66,7 +66,7 @@ export function ImageComponent({ image }) {
         style={{ width: "100%", height: "auto" }}
         priority={true}
       />
-      <div>{image.title}</div>
+      <h2>{image.title}</h2>
       <div>{image.description}</div>
       {session && (
         <ImageDetailsForm onEditDetails={handleEditDetails} image={image} />
