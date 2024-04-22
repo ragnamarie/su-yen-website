@@ -1,7 +1,7 @@
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
 import useSWR from "swr";
+import { ImageDetailsForm } from "../ImageDetailsForm";
 
 export function ImageComponent({ image }) {
   console.log(image);
@@ -24,9 +24,12 @@ export function ImageComponent({ image }) {
     router.push("/");
   }
 
-  async function handleEdit(event, id, filename) {
+  async function handleEditDetails(event, id, filename) {
     console.log("iscalled");
     event.preventDefault();
+
+    const formData = new FormData(event.target);
+    const title = formData.get("title");
 
     const response = await fetch(`/api/images/${id}/${filename}`, {
       method: "PATCH",
@@ -35,7 +38,7 @@ export function ImageComponent({ image }) {
       },
       body: JSON.stringify({
         ...imageData,
-        title: "Title",
+        title: title,
       }),
     });
 
@@ -59,20 +62,7 @@ export function ImageComponent({ image }) {
         style={{ width: "100%", height: "auto" }}
         priority={true}
       />
-      <form
-        onSubmit={(event) =>
-          handleEdit(event, image._id, image.originalFilename)
-        }
-      >
-        <label htmlFor="artName-input">💱name</label>
-        <input
-          type="artName"
-          id="artName-input"
-          name="artName"
-          defaultValue="tba"
-        />
-        <button>add name</button>
-      </form>
+      <ImageDetailsForm onEditDetails={handleEditDetails} image={image} />
     </div>
   );
 }
