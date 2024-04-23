@@ -9,43 +9,45 @@ export default createGlobalStyle`
 
   #__next {
     margin: 0;
-    min-height: 100%;
+    min-height: 100vh; /* Change min-height to min-height: 100vh */
     min-width: 100%;
+    display: flex;
+    flex-direction: column; /* Make sure the container is a column layout */
   }
 
   header {
     display: flex;
-    gap: 30%;
     justify-content: space-between;
     z-index: 10;
     position: sticky;
-    padding: 20px;
+    padding-left: 20px;
     min-width: 100vw;
-
   }
 
   body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Inter', sans-serif; /* Updated font-family */
     height: 100%;
     width: 100%;
   }
 
   main {
+    flex: 1; /* This will make the main content area grow to fill the available space */
     min-width: 100vw;
     padding: 20px;
   }
 
   footer {
     display: flex;
+    flex-shrink: 0; /* Prevent the footer from shrinking */
     flex-direction: row;
     justify-content: space-between;    
     padding: 20px;
-    bottom: 0;
     min-width: 100vw;
   } 
 
   ul {
     display: grid;
+    padding: 0px;
   }
 
   li {
@@ -56,12 +58,28 @@ export default createGlobalStyle`
 
   a {
     text-decoration: none;
-    font-weight: 700;
     color: black;
+  }
+
+  h1 {
+    font-weight: 300;
+    color: black;
+    position: relative;
+  }
+  
+  h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px; /* Adjust this value to control the distance from the text */
+    width: 125%;
+    height: 1px;
+    background-color: black;
   }
 
   h2 {
     font-weight: 500;
     color: black;
   }
+
 `;

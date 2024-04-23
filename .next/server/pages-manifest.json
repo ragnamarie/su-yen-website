@@ -2,8 +2,12 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/": "pages/index.js",
   "/works": "pages/works.js",
+  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
   "/api/images": "pages/api/images.js",
   "/api/images/[id]/[filename]": "pages/api/images/[id]/[filename].js",
-  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js"
+  "/about": "pages/about.js",
+  "/contact": "pages/contact.js",
+  "/api/contacts": "pages/api/contacts.js"
 }

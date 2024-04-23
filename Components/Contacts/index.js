@@ -3,29 +3,23 @@ import Link from "next/link";
 import { useSession } from "next-auth/react";
 
 const StyledList = styled.ul`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   gap: 20px;
-  padding-right: 40px;
 `;
 
 const StyledListItem = styled.li`
-  font-weight: 700;
-  font-size: 20px;
-`;
-
-const EditButton = styled.span`
+  font-weight: 300;
+  font-size: 14px;
   position: relative;
-  color: white;
-  background-color: black;
-  font-size: 12px;
-  font-family: Futura;
-  font-weight: 700;
-  word-wrap: break-word;
-  border: none;
-  border-radius: 30px;
-  padding: 10px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px; /* Adjust this value to control the distance from the text */
+    width: 100%;
+    height: 1px;
+    background-color: black;
+  }
 `;
 
 export default function Contacts({ contacts }) {
@@ -35,16 +29,48 @@ export default function Contacts({ contacts }) {
     <>
       <StyledList>
         <StyledListItem>
-          <u>💱phone</u> {contacts.phone}
+          💱phone
+          <text
+            style={{
+              color: "#999696",
+              padding: "10px",
+            }}
+          >
+            {contacts.phone}
+          </text>
         </StyledListItem>
         <StyledListItem>
-          <u>💱mail</u> {contacts.mail}
+          💱mail
+          <text
+            style={{
+              color: "#999696",
+              padding: "10px",
+            }}
+          >
+            {contacts.mail}
+          </text>
         </StyledListItem>
         <StyledListItem>
-          <u>💱instagram</u> {contacts.instagram}
+          💱instagram
+          <text
+            style={{
+              color: "#999696",
+              padding: "10px",
+            }}
+          >
+            {contacts.instagram}
+          </text>
         </StyledListItem>
         <StyledListItem>
-          <u>💱tiktok</u> {contacts.tiktok}
+          💱tiktok
+          <text
+            style={{
+              color: "#999696",
+              padding: "10px",
+            }}
+          >
+            {contacts.tiktok}
+          </text>
         </StyledListItem>
         {session && (
           <Link href="/editcontact">

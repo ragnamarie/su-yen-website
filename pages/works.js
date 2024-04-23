@@ -18,7 +18,6 @@ export default function WorksPage() {
 
   return (
     <>
-      <h2>check out my amazing work</h2>
       <div
         className={`flex min-h-screen flex-col items-center justify-between p-24`}
       >
