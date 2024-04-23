@@ -3,7 +3,9 @@ import styled from "styled-components";
 
 const Container = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: left; /* Center the items horizontally */
+  align-items: center; /* Center the items vertically */
+  height: 100%; /* Ensure the container takes up the full height of the overlay */
 `;
 
 const Wrapper = styled.div`
@@ -15,10 +17,6 @@ const StyledLink = styled.a`
   text-decoration: none;
   color: black;
   position: relative;
-
-  &:hover {
-    text-decoration: underline;
-  }
 `;
 
 const Overlay = styled.div`
@@ -31,6 +29,22 @@ const Overlay = styled.div`
   z-index: 100;
   transition: top 1s ease; /* Removed transition for bottom */
   pointer-events: ${(props) => (props.isOpen ? "auto" : "none")};
+`;
+
+const MenuHeadings = styled.h1`
+  font-size: 54px;
+  position: relative;
+  &:hover {
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 1000%; /* Span the width of the container */
+      height: 1px;
+      background-color: black;
+    }
+  }
 `;
 
 export default function Hamburger() {
@@ -69,19 +83,19 @@ export default function Hamburger() {
         <Container>
           <ul>
             <li>
-              <h1>
-                <StyledLink href="/">HOME</StyledLink>
-              </h1>
-            </li>
-            <li>
-              <h1>
+              <MenuHeadings>
                 <StyledLink href="/works">WORKS</StyledLink>
-              </h1>
+              </MenuHeadings>
             </li>
             <li>
-              <h1>
+              <MenuHeadings>
                 <StyledLink href="/about">ABOUT</StyledLink>
-              </h1>
+              </MenuHeadings>
+            </li>
+            <li>
+              <MenuHeadings>
+                <StyledLink href="/imprint">IMPRINT</StyledLink>
+              </MenuHeadings>
             </li>
           </ul>
         </Container>

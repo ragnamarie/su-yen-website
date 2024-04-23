@@ -44,6 +44,7 @@ export default createGlobalStyle`
 
   ul {
     display: grid;
+    padding: 28px;
   }
 
   li {
@@ -54,7 +55,6 @@ export default createGlobalStyle`
 
   a {
     text-decoration: none;
-    font-weight: 700;
     color: black;
   }
 

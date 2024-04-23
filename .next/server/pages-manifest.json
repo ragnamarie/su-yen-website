@@ -2,8 +2,11 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/about": "pages/about.js",
+  "/contact": "pages/contact.js",
+  "/api/images/[id]/[filename]": "pages/api/images/[id]/[filename].js",
   "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
-  "/works": "pages/works.js",
   "/": "pages/index.js",
-  "/about": "pages/about.js"
+  "/api/contacts": "pages/api/contacts.js",
+  "/works": "pages/works.js"
 }
