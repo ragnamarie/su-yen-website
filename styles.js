@@ -24,6 +24,15 @@ export default createGlobalStyle`
     min-width: 100vw;
   }
 
+  /* if any layout stuff is weird delete this part */
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  /* if any layout stuff is weird delete this part */
+  
   body {
     font-family: 'Inter', sans-serif; /* Updated font-family */
     height: 100%;
