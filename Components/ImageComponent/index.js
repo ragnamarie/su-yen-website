@@ -69,7 +69,6 @@ export function ImageComponent({ image }) {
   return (
     <ImageWrapper className={`w-64 h-32 relative`}>
       <h2>{image.title}</h2>
-
       <img
         alt=""
         src={image.src}
@@ -91,5 +90,3 @@ export function ImageComponent({ image }) {
     </ImageWrapper>
   );
 }
-
-//idea: each uploaded pictures renders a form via which i can merge another property (title, description etc) into the image object
