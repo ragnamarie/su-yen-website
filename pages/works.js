@@ -13,7 +13,7 @@ export default function WorksPage() {
   console.log(images);
 
   if (isLoading) {
-    return "loading...";
+    return <p>Loading...</p>;
   }
 
   return (

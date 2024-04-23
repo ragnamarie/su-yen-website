@@ -5,7 +5,7 @@ export default function EditContactPage() {
   const { data, isLoading } = useSWR("/api/contacts");
 
   if (isLoading) {
-    return <h1>Loading...</h1>;
+    return <p>Loading...</p>;
   }
 
   if (!data) {
