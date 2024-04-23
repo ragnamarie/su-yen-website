@@ -2,6 +2,21 @@ import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
 import useSWR from "swr";
 import { ImageDetailsForm } from "../ImageDetailsForm";
+import styled from "styled-components";
+
+const ImageWrapper = styled.div`
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px; /* Adjust this value to control the distance  */
+    width: 100%;
+    height: 1px;
+    background-color: black;
+  }
+`;
 
 export function ImageComponent({ image }) {
   console.log(image);
@@ -52,12 +67,9 @@ export function ImageComponent({ image }) {
   }
 
   return (
-    <div className={`w-64 h-32 relative`}>
-      {session && (
-        <button onClick={() => handleDelete(image._id, image.originalFilename)}>
-          <span role="img">delete this one</span>
-        </button>
-      )}
+    <ImageWrapper className={`w-64 h-32 relative`}>
+      <h2>{image.title}</h2>
+
       <img
         alt=""
         src={image.src}
@@ -66,12 +78,17 @@ export function ImageComponent({ image }) {
         style={{ width: "100%", height: "auto" }}
         priority={true}
       />
-      <h2>{image.title}</h2>
+
       <div>{image.description}</div>
       {session && (
         <ImageDetailsForm onEditDetails={handleEditDetails} image={image} />
       )}
-    </div>
+      {session && (
+        <button onClick={() => handleDelete(image._id, image.originalFilename)}>
+          <span role="img">delete this one</span>
+        </button>
+      )}
+    </ImageWrapper>
   );
 }
 

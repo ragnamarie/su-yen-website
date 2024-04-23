@@ -9,8 +9,10 @@ export default createGlobalStyle`
 
   #__next {
     margin: 0;
-    min-height: 100%;
+    min-height: 100vh; /* Change min-height to min-height: 100vh */
     min-width: 100%;
+    display: flex;
+    flex-direction: column; /* Make sure the container is a column layout */
   }
 
   header {
@@ -29,22 +31,23 @@ export default createGlobalStyle`
   }
 
   main {
+    flex: 1; /* This will make the main content area grow to fill the available space */
     min-width: 100vw;
     padding: 20px;
   }
 
   footer {
     display: flex;
+    flex-shrink: 0; /* Prevent the footer from shrinking */
     flex-direction: row;
     justify-content: space-between;    
     padding: 20px;
-    bottom: 0;
     min-width: 100vw;
   } 
 
   ul {
     display: grid;
-    padding: 28px;
+    padding: 0px;
   }
 
   li {
@@ -78,4 +81,5 @@ export default createGlobalStyle`
     font-weight: 500;
     color: black;
   }
+
 `;

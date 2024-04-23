@@ -3,9 +3,13 @@ import styled from "styled-components";
 
 const Container = styled.div`
   display: flex;
-  justify-content: left; /* Center the items horizontally */
-  align-items: center; /* Center the items vertically */
+  justify-content: left; /* Align items to the end horizontally */
+  align-items: flex-end; /* Align items to the end vertically */
   height: 100%; /* Ensure the container takes up the full height of the overlay */
+`;
+
+const StyledMenuList = styled.ul`
+  padding: 28px;
 `;
 
 const Wrapper = styled.div`
@@ -25,13 +29,13 @@ const Overlay = styled.div`
   left: 0;
   height: 100vh;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Grey semi-transparent color */
+  background-color: rgba(217, 217, 217, 0.5); /* Grey semi-transparent color */
   z-index: 100;
   transition: top 1s ease; /* Removed transition for bottom */
   pointer-events: ${(props) => (props.isOpen ? "auto" : "none")};
 `;
 
-const MenuHeadings = styled.h1`
+const MenuHeading = styled.h1`
   font-size: 54px;
   position: relative;
   &:hover {
@@ -81,23 +85,23 @@ export default function Hamburger() {
       </Wrapper>
       <Overlay isOpen={isOpen} onClick={toggleMenu}>
         <Container>
-          <ul>
+          <StyledMenuList>
             <li>
-              <MenuHeadings>
+              <MenuHeading>
                 <StyledLink href="/works">WORKS</StyledLink>
-              </MenuHeadings>
+              </MenuHeading>
             </li>
             <li>
-              <MenuHeadings>
+              <MenuHeading>
                 <StyledLink href="/about">ABOUT</StyledLink>
-              </MenuHeadings>
+              </MenuHeading>
             </li>
             <li>
-              <MenuHeadings>
+              <MenuHeading>
                 <StyledLink href="/imprint">IMPRINT</StyledLink>
-              </MenuHeadings>
+              </MenuHeading>
             </li>
-          </ul>
+          </StyledMenuList>
         </Container>
       </Overlay>
     </div>
