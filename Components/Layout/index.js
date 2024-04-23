@@ -7,13 +7,7 @@ export default function Layout({ children }) {
     <>
       <header>
         <Link href="/">
-          <Image
-            src="/syhennings_light.png"
-            width={339}
-            height={138}
-            alt="Logo"
-            style={{ width: "100%", height: "auto" }}
-          />
+          <h1>su-yen hennings</h1>
         </Link>
         <Navigation></Navigation>
       </header>

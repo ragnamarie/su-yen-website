@@ -15,17 +15,15 @@ export default createGlobalStyle`
 
   header {
     display: flex;
-    gap: 30%;
     justify-content: space-between;
     z-index: 10;
     position: sticky;
-    padding: 20px;
+    padding-left: 20px;
     min-width: 100vw;
-
   }
 
   body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Inter', sans-serif; /* Updated font-family */
     height: 100%;
     width: 100%;
   }
@@ -58,6 +56,22 @@ export default createGlobalStyle`
     text-decoration: none;
     font-weight: 700;
     color: black;
+  }
+
+  h1 {
+    font-weight: 300;
+    color: black;
+    position: relative;
+  }
+  
+  h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px; /* Adjust this value to control the distance from the text */
+    width: 125%;
+    height: 1px;
+    background-color: black;
   }
 
   h2 {

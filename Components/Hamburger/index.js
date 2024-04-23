@@ -1,6 +1,5 @@
 import { useState } from "react";
 import styled from "styled-components";
-import Image from "next/image";
 
 const Container = styled.div`
   display: flex;
@@ -24,20 +23,13 @@ const StyledLink = styled.a`
 
 const Overlay = styled.div`
   position: fixed;
-  top: ${(props) =>
-    props.isOpen ? "0" : "-100vh"}; /* Start from top or above the viewport */
+  top: ${(props) => (props.isOpen ? "0" : "-100vh")};
   left: 0;
   height: 100vh;
   width: 100%;
-  background-image: ${(props) =>
-    props.isOpen
-      ? "url('/hamburger_background.jpg')"
-      : "url('/hamburger_background.jpg')"};
-  background-size: cover;
-  background-position: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Grey semi-transparent color */
   z-index: 100;
-  transition: top 1s ease, bottom 1s ease; /* Add transition effect for top and opacity */
-  bottom: ${(props) => (props.isOpen ? "1" : "0")};
+  transition: top 1s ease; /* Removed transition for bottom */
   pointer-events: ${(props) => (props.isOpen ? "auto" : "none")};
 `;
 
@@ -50,15 +42,30 @@ export default function Hamburger() {
 
   return (
     <div>
-      <Image
-        onClick={toggleMenu}
-        src="/hamburger.jpg"
-        width={90}
-        height={64}
-        alt="Hamburger"
-        style={{ width: "100%", height: "auto" }}
-      />
-      <Overlay isOpen={isOpen}>
+      <Wrapper>
+        {/* Hamburger menu icon SVG */}
+        <svg
+          onClick={toggleMenu}
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1"
+          strokeLinecap="square"
+          strokeLinejoin="square"
+          style={{
+            cursor: "pointer",
+            position: "relative",
+          }}
+        >
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </Wrapper>
+      <Overlay isOpen={isOpen} onClick={toggleMenu}>
         <Container>
           <ul>
             <li>
@@ -77,22 +84,6 @@ export default function Hamburger() {
               </h1>
             </li>
           </ul>
-          <Wrapper>
-            <svg
-              onClick={toggleMenu}
-              xmlns="http://www.w3.org/2000/svg"
-              width="60"
-              height="60"
-              margin="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-          </Wrapper>
         </Container>
       </Overlay>
     </div>
