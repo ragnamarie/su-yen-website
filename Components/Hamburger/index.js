@@ -6,6 +6,10 @@ const Container = styled.div`
   justify-content: left; /* Align items to the end horizontally */
   align-items: flex-end; /* Align items to the end vertically */
   height: 100%; /* Ensure the container takes up the full height of the overlay */
+
+  @media screen and (max-width: 700px) {
+    transform: translateY(-20%);
+  }
 `;
 
 const StyledMenuList = styled.ul`
