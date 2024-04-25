@@ -4,18 +4,36 @@ import styled from "styled-components";
 import { useSession } from "next-auth/react";
 
 const StyledList = styled.ul`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   gap: 20px;
-  padding-right: 40px;
 `;
 
 const StyledListItem = styled.li`
-  display: flex;
-  gap: 10px;
-  font-weight: 700;
-  font-size: 20px;
+  font-weight: 300;
+  font-size: 14px;
+  position: relative;
+
+  @media screen and (max-width: 700px) {
+    font-size: 10px;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px; /* Adjust this value to control the distance from the text */
+    width: 400px;
+    height: 1px;
+    background-color: black;
+
+    @media screen and (max-width: 700px) {
+      width: 200px;
+    }
+  }
+`;
+
+const StyledLabel = styled.label`
+  font-style: normal;
+  padding-right: 10px;
 `;
 
 export default function ContactForm({ contacts }) {
@@ -57,9 +75,7 @@ export default function ContactForm({ contacts }) {
     <form onSubmit={handleEdit}>
       <StyledList>
         <StyledListItem>
-          <label htmlFor="phone-input">
-            <u>💱phone</u>
-          </label>
+          <StyledLabel htmlFor="phone-input">💱phone</StyledLabel>
           <input
             type="text"
             id="phone-input"
@@ -68,9 +84,7 @@ export default function ContactForm({ contacts }) {
           />
         </StyledListItem>
         <StyledListItem>
-          <label htmlFor="mail-input">
-            <u>💱mail</u>
-          </label>
+          <StyledLabel htmlFor="mail-input">💱mail</StyledLabel>
           <input
             type="mail"
             id="mail-input"
@@ -79,9 +93,7 @@ export default function ContactForm({ contacts }) {
           />
         </StyledListItem>
         <StyledListItem>
-          <label htmlFor="instagram-input">
-            <u>💱instagram</u>
-          </label>
+          <StyledLabel htmlFor="instagram-input">💱instagram</StyledLabel>
           <input
             type="text"
             id="instagram-input"
@@ -90,9 +102,7 @@ export default function ContactForm({ contacts }) {
           />
         </StyledListItem>
         <StyledListItem>
-          <label htmlFor="tiktok-input">
-            <u>💱tiktok</u>
-          </label>
+          <StyledLabel htmlFor="tiktok-input">💱tiktok</StyledLabel>
           <input
             type="text"
             id="tiktok-input"
@@ -100,15 +110,15 @@ export default function ContactForm({ contacts }) {
             defaultValue={contacts.tiktok}
           />
         </StyledListItem>
-        <button
-          style={{
-            fontWeight: "700",
-          }}
-          type="submit"
-        >
-          Save Changes
-        </button>
       </StyledList>
+      <button
+        style={{
+          fontWeight: "700",
+        }}
+        type="submit"
+      >
+        Save Changes
+      </button>
     </form>
   );
 }

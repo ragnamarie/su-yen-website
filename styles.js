@@ -65,7 +65,7 @@ export default createGlobalStyle`
 
   li {
     list-style-type: none;
-    font-weight: 700;
+    font-weight: 300;
     font-size: 24px;
   }
 
@@ -121,7 +121,7 @@ export default createGlobalStyle`
   }
 
   label {
-    font-weight: 500;
+    font-weight: 300;
     font-style: italic;
     margin-top: 8px;
   }
