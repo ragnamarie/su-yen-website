@@ -80,12 +80,11 @@ export function ImageComponent({ image }) {
 
       <div>{image.description}</div>
       {session && (
-        <ImageDetailsForm onEditDetails={handleEditDetails} image={image} />
-      )}
-      {session && (
-        <button onClick={() => handleDelete(image._id, image.originalFilename)}>
-          <span role="img">delete this one</span>
-        </button>
+        <ImageDetailsForm
+          onEditDetails={handleEditDetails}
+          onDelete={handleDelete}
+          image={image}
+        />
       )}
     </ImageWrapper>
   );

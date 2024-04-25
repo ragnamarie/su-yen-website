@@ -12,6 +12,8 @@ const StyledList = styled.ul`
 `;
 
 const StyledListItem = styled.li`
+  display: flex;
+  gap: 10px;
   font-weight: 700;
   font-size: 20px;
 `;
@@ -66,7 +68,9 @@ export default function ContactForm({ contacts }) {
           />
         </StyledListItem>
         <StyledListItem>
-          <label htmlFor="mail-input">💱mail</label>
+          <label htmlFor="mail-input">
+            <u>💱mail</u>
+          </label>
           <input
             type="mail"
             id="mail-input"
@@ -96,7 +100,14 @@ export default function ContactForm({ contacts }) {
             defaultValue={contacts.tiktok}
           />
         </StyledListItem>
-        <button type="submit">SUBMIT</button>
+        <button
+          style={{
+            fontWeight: "700",
+          }}
+          type="submit"
+        >
+          Save Changes
+        </button>
       </StyledList>
     </form>
   );

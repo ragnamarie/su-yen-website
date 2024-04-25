@@ -110,8 +110,20 @@ export default createGlobalStyle`
   }
 
   h2 {
+    font-weight: 300;
+    color: black;
+  }
+
+   h3 {
     font-weight: 500;
     color: black;
+    font-style: italic;
+  }
+
+  label {
+    font-weight: 500;
+    font-style: italic;
+    margin-top: 8px;
   }
 
 `;

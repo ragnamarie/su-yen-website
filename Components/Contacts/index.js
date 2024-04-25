@@ -82,7 +82,13 @@ export default function Contacts({ contacts }) {
         </StyledListItem>
         {session && (
           <Link href="/editcontact">
-            <button>EDIT CONTACT INFO</button>
+            <button
+              style={{
+                fontWeight: "700",
+              }}
+            >
+              Edit
+            </button>
           </Link>
         )}
       </StyledList>
