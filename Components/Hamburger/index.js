@@ -9,12 +9,7 @@ const Container = styled.div`
 `;
 
 const StyledMenuList = styled.ul`
-  padding: 28px;
-`;
-
-const Wrapper = styled.div`
-  padding-top: 20px;
-  padding-right: 20px;
+  padding-left: 20px;
 `;
 
 const StyledLink = styled.a`
@@ -38,6 +33,9 @@ const Overlay = styled.div`
 const MenuHeading = styled.h1`
   font-size: 54px;
   position: relative;
+  @media screen and (max-width: 700px) {
+    font-size: 40px; /* Change font size for smaller screens */
+  }
   &:hover {
     &:after {
       content: "";
@@ -59,30 +57,28 @@ export default function Hamburger() {
   }
 
   return (
-    <div>
-      <Wrapper>
-        {/* Hamburger menu icon SVG */}
-        <svg
-          onClick={toggleMenu}
-          xmlns="http://www.w3.org/2000/svg"
-          width="40"
-          height="40"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1"
-          strokeLinecap="square"
-          strokeLinejoin="square"
-          style={{
-            cursor: "pointer",
-            position: "relative",
-          }}
-        >
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </Wrapper>
+    <>
+      {/* Hamburger menu icon SVG */}
+      <svg
+        onClick={toggleMenu}
+        xmlns="http://www.w3.org/2000/svg"
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1"
+        strokeLinecap="square"
+        strokeLinejoin="square"
+        style={{
+          cursor: "pointer",
+          position: "relative",
+        }}
+      >
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
       <Overlay isOpen={isOpen} onClick={toggleMenu}>
         <Container>
           <StyledMenuList>
@@ -104,6 +100,6 @@ export default function Hamburger() {
           </StyledMenuList>
         </Container>
       </Overlay>
-    </div>
+    </>
   );
 }

@@ -11,14 +11,22 @@ const StyledListItem = styled.li`
   font-size: 14px;
   position: relative;
 
+  @media screen and (max-width: 700px) {
+    font-size: 10px;
+  }
+
   &:after {
     content: "";
     position: absolute;
     left: 0;
     bottom: -6px; /* Adjust this value to control the distance from the text */
-    width: 100%;
+    width: 400px;
     height: 1px;
     background-color: black;
+
+    @media screen and (max-width: 700px) {
+      width: 200px;
+    }
   }
 `;
 
@@ -74,7 +82,13 @@ export default function Contacts({ contacts }) {
         </StyledListItem>
         {session && (
           <Link href="/editcontact">
-            <button>EDIT CONTACT INFO</button>
+            <button
+              style={{
+                fontWeight: "700",
+              }}
+            >
+              Edit
+            </button>
           </Link>
         )}
       </StyledList>

@@ -69,7 +69,6 @@ export function ImageComponent({ image }) {
   return (
     <ImageWrapper className={`w-64 h-32 relative`}>
       <h2>{image.title}</h2>
-
       <img
         alt=""
         src={image.src}
@@ -81,15 +80,12 @@ export function ImageComponent({ image }) {
 
       <div>{image.description}</div>
       {session && (
-        <ImageDetailsForm onEditDetails={handleEditDetails} image={image} />
-      )}
-      {session && (
-        <button onClick={() => handleDelete(image._id, image.originalFilename)}>
-          <span role="img">delete this one</span>
-        </button>
+        <ImageDetailsForm
+          onEditDetails={handleEditDetails}
+          onDelete={handleDelete}
+          image={image}
+        />
       )}
     </ImageWrapper>
   );
 }
-
-//idea: each uploaded pictures renders a form via which i can merge another property (title, description etc) into the image object

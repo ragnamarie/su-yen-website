@@ -7,7 +7,7 @@ export default function Layout({ children }) {
     <>
       <header>
         <Link href="/">
-          <h1>su-yen hennings</h1>
+          <h1>Su-Yen Hennings</h1>
         </Link>
         <Navigation></Navigation>
       </header>

@@ -16,14 +16,26 @@ export default createGlobalStyle`
   }
 
   header {
-    display: flex;
-    justify-content: space-between;
-    z-index: 10;
-    position: sticky;
-    padding-left: 20px;
-    min-width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+  z-index: 10;
+  position: sticky;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  min-width: 100vw;
   }
 
+  /* if any layout stuff is weird delete this part */
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  /* if any layout stuff is weird delete this part */
+  
   body {
     font-family: 'Inter', sans-serif; /* Updated font-family */
     height: 100%;
@@ -41,7 +53,8 @@ export default createGlobalStyle`
     flex-shrink: 0; /* Prevent the footer from shrinking */
     flex-direction: row;
     justify-content: space-between;    
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     min-width: 100vw;
   } 
 
@@ -52,7 +65,7 @@ export default createGlobalStyle`
 
   li {
     list-style-type: none;
-    font-weight: 700;
+    font-weight: 300;
     font-size: 24px;
   }
 
@@ -72,14 +85,45 @@ export default createGlobalStyle`
     position: absolute;
     left: 0;
     bottom: -6px; /* Adjust this value to control the distance from the text */
-    width: 125%;
+    width: 400px;
     height: 1px;
     background-color: black;
   }
 
+  @media screen and (max-width: 700px) {
+    h1 {
+      font-weight: 300;
+      font-size: 16px;
+      color: black;
+      position: relative;
+    }
+
+    h1::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px; /* Adjust this value to control the distance from the text */
+      width: 200px;
+      height: 1px;
+      background-color: black;
+    }
+  }
+
   h2 {
+    font-weight: 300;
+    color: black;
+  }
+
+   h3 {
     font-weight: 500;
     color: black;
+    font-style: italic;
+  }
+
+  label {
+    font-weight: 300;
+    font-style: italic;
+    margin-top: 8px;
   }
 
 `;
