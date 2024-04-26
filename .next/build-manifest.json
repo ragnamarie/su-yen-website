@@ -37,10 +37,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/contact.js"
     ],
-    "/editcontact": [
+    "/login": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/editcontact.js"
+      "static/chunks/pages/login.js"
     ],
     "/works": [
       "static/chunks/webpack.js",

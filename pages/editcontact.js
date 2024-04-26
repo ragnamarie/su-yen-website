@@ -2,7 +2,7 @@ import ContactForm from "@/Components/ContactForm";
 import useSWR from "swr";
 
 export default function EditContactPage() {
-  const { data, isLoading } = useSWR("/api/contacts");
+  const { data, isLoading } = useSWR("/api/infos");
 
   if (isLoading) {
     return <p>Loading...</p>;
