@@ -14,7 +14,7 @@ const StyledLink = styled.a`
 `;
 
 export default function ContactPage() {
-  const { data, isLoading } = useSWR("/api/contacts");
+  const { data, isLoading } = useSWR("/api/infos");
 
   if (isLoading) {
     return <p>Loading...</p>;

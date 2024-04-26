@@ -63,6 +63,8 @@ export default createGlobalStyle`
     padding: 0px;
   }
 
+
+
   li {
     list-style-type: none;
     font-weight: 300;
@@ -93,7 +95,7 @@ export default createGlobalStyle`
   @media screen and (max-width: 700px) {
     h1 {
       font-weight: 300;
-      font-size: 16px;
+      font-size: 20px;
       color: black;
       position: relative;
     }

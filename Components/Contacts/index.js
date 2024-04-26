@@ -38,47 +38,51 @@ export default function Contacts({ contacts }) {
       <StyledList>
         <StyledListItem>
           💱phone
-          <text
+          <small
             style={{
               color: "#999696",
               padding: "10px",
+              fontSize: "10px",
             }}
           >
             {contacts.phone}
-          </text>
+          </small>
         </StyledListItem>
         <StyledListItem>
           💱mail
-          <text
+          <small
             style={{
               color: "#999696",
               padding: "10px",
+              fontSize: "10px",
             }}
           >
             {contacts.mail}
-          </text>
+          </small>
         </StyledListItem>
         <StyledListItem>
           💱instagram
-          <text
+          <small
             style={{
               color: "#999696",
               padding: "10px",
+              fontSize: "10px",
             }}
           >
             {contacts.instagram}
-          </text>
+          </small>
         </StyledListItem>
         <StyledListItem>
           💱tiktok
-          <text
+          <small
             style={{
               color: "#999696",
               padding: "10px",
+              fontSize: "10px",
             }}
           >
             {contacts.tiktok}
-          </text>
+          </small>
         </StyledListItem>
         {session && (
           <Link href="/editcontact">

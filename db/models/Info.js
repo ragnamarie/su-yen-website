@@ -2,14 +2,14 @@ import mongoose from "mongoose";
 
 const { Schema } = mongoose;
 
-const contactSchema = new Schema({
+const infoSchema = new Schema({
   phone: { type: String },
   mail: { type: String },
   instagram: { type: String },
   tiktok: { type: String },
+  about: { type: String },
 });
 
-const Contact =
-  mongoose.models.Contact || mongoose.model("Contact", contactSchema);
+const Info = mongoose.models.Info || mongoose.model("Info", infoSchema);
 
-export default Contact;
+export default Info;

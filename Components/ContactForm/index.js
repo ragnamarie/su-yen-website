@@ -42,7 +42,7 @@ export default function ContactForm({ contacts }) {
   const id = contacts._id;
   console.log(id);
 
-  const { data, isLoading, mutate } = useSWR(`/api/contacts/${id}`);
+  const { data, isLoading, mutate } = useSWR(`/api/infos/${id}`);
 
   console.log(data);
 
@@ -52,7 +52,7 @@ export default function ContactForm({ contacts }) {
     const formData = new FormData(event.target);
     const contactData = Object.fromEntries(formData);
 
-    const response = await fetch(`/api/contacts/${id}`, {
+    const response = await fetch(`/api/infos/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

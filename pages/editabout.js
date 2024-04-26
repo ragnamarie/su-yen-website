@@ -1,7 +1,7 @@
-import ContactForm from "@/Components/ContactForm";
+import AboutForm from "@/Components/AboutForm";
 import useSWR from "swr";
 
-export default function EditContactPage() {
+export default function EditAboutPage() {
   const { data, isLoading } = useSWR("/api/infos");
 
   if (isLoading) {
@@ -13,12 +13,12 @@ export default function EditContactPage() {
   }
   console.log(data);
 
-  const contacts = data[0];
-  console.log(contacts);
+  const infos = data[0];
+  console.log(infos);
 
   return (
     <>
-      <ContactForm contacts={contacts} />
+      <AboutForm infos={infos} />
     </>
   );
 }

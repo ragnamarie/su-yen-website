@@ -13,7 +13,7 @@ const StyledBottonWrapper = styled.div`
 export function ImageDetailsForm({ onDelete, onEditDetails, image }) {
   return (
     <>
-      <h3>Change Details</h3>
+      <h3>Edit Details</h3>
       <StyledDetailsForm
         onSubmit={(event) =>
           onEditDetails(event, image._id, image.originalFilename)
@@ -42,7 +42,6 @@ export function ImageDetailsForm({ onDelete, onEditDetails, image }) {
         />
         <StyledBottonWrapper>
           <button
-            onClick={() => onDelete(image._id, image.originalFilename)}
             style={{
               width: "50%",
               marginTop: "10px",
