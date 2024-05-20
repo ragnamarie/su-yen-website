@@ -5,16 +5,25 @@ import { ImageDetailsForm } from "../ImageDetailsForm";
 import styled from "styled-components";
 
 const ImageWrapper = styled.div`
-  position: relative;
+  padding-top: 30px;
+`;
 
-  &:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px; /* Adjust this value to control the distance  */
-    width: 100%;
-    height: 1px;
-    background-color: black;
+const Wrapper = styled.div`
+  @media (min-width: 700px) {
+    display: flex;
+    align-items: start;
+    gap: 30px; /* Adjust the gap between image and description */
+    padding-bottom: 30px;
+
+    img {
+      flex: 0 0 auto; /* Prevent the image from growing */
+      max-width: 50%; /* Set maximum width for the image */
+      height: auto; /* Maintain aspect ratio */
+    }
+
+    div {
+      flex: 1; /* Allow description to grow and take remaining space */
+    }
   }
 `;
 
@@ -67,18 +76,20 @@ export function ImageComponent({ image }) {
   }
 
   return (
-    <ImageWrapper className={`w-64 h-32 relative`}>
+    <div className={`w-64 h-32 relative`}>
       <h2>{image.title}</h2>
-      <img
-        alt=""
-        src={image.src}
-        fill={true}
-        layout="responsive"
-        style={{ width: "100%", height: "auto" }}
-        priority={true}
-      />
+      <Wrapper>
+        <img
+          alt=""
+          src={image.src}
+          fill={true}
+          layout="responsive"
+          style={{ width: "100%", height: "auto" }}
+          priority={true}
+        />
 
-      <div>{image.description}</div>
+        <div>{image.description}</div>
+      </Wrapper>
       {session && (
         <ImageDetailsForm
           onEditDetails={handleEditDetails}
@@ -86,6 +97,6 @@ export function ImageComponent({ image }) {
           image={image}
         />
       )}
-    </ImageWrapper>
+    </div>
   );
 }
