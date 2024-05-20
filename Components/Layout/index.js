@@ -1,6 +1,13 @@
 import Image from "next/image";
 import Navigation from "../Navigation";
 import Link from "next/link";
+import styled from "styled-components";
+import Footer from "../Footer";
+
+const StyledFooter = styled.footer`
+  display: flex;
+  align-items: end;
+`;
 
 export default function Layout({ children }) {
   return (
@@ -12,14 +19,7 @@ export default function Layout({ children }) {
         <Navigation></Navigation>
       </header>
       <main>{children}</main>
-      <footer>
-        <p>
-          <small>hennings &copy;</small>
-        </p>
-        <p>
-          <Link href="/login">💱 💱 💱</Link>
-        </p>
-      </footer>
+      <Footer />
     </>
   );
 }
