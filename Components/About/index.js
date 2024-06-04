@@ -6,11 +6,11 @@ const StyledAboutText = styled.div`
   white-space: pre-line; /* Preserve line breaks */
   margin-right: 20px;
   padding-bottom: 20px;
-  width: 50%;
+  width: 400px;
   display: block;
 
   @media screen and (max-width: 700px) {
-    width: 100%;
+    width: 200px;
   }
 `;
 

@@ -4,10 +4,6 @@ import useSWR from "swr";
 import { ImageDetailsForm } from "../ImageDetailsForm";
 import styled from "styled-components";
 
-const ImageWrapper = styled.div`
-  padding-top: 30px;
-`;
-
 const Wrapper = styled.div`
   @media (min-width: 700px) {
     display: flex;
@@ -23,6 +19,13 @@ const Wrapper = styled.div`
 
     div {
       flex: 1; /* Allow description to grow and take remaining space */
+    }
+  }
+
+  @media (max-width: 699px) {
+    div {
+      padding-top: 20px; /* Add padding top to description */
+      padding-bottom: 20px; /* Add padding top to description */
     }
   }
 `;

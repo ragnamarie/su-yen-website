@@ -30,6 +30,7 @@ export default function Footer() {
           <p>
             <small>hennings &copy;</small>
           </p>
+          <Image src="/trevor.png" width={150} height={150} alt="Trevor" />
           <p>
             <Link href="/login">💱 💱 💱</Link>
           </p>
