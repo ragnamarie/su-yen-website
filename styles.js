@@ -19,7 +19,9 @@ export default createGlobalStyle`
   display: flex;
   justify-content: space-between;
   align-items: center; /* Center items vertically */
-  z-index: 10;
+  z-index: 1000;
+  top: 0;
+  background-color: white;
   position: sticky;
   padding-left: 20px;
   padding-right: 20px;
@@ -62,8 +64,6 @@ export default createGlobalStyle`
     display: grid;
     padding: 0px;
   }
-
-
 
   li {
     list-style-type: none;
