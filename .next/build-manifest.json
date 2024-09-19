@@ -32,15 +32,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/about.js"
     ],
-    "/confirmation": [
+    "/contact": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/confirmation.js"
+      "static/chunks/pages/contact.js"
     ],
-    "/login": [
+    "/imprint": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/login.js"
+      "static/chunks/pages/imprint.js"
     ],
     "/works": [
       "static/chunks/webpack.js",
