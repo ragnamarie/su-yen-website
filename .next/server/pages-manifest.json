@@ -2,13 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/works": "pages/works.js",
   "/imprint": "pages/imprint.js",
-  "/api/images": "pages/api/images.js",
-  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
-  "/contact": "pages/contact.js",
-  "/about": "pages/about.js",
-  "/api/images/[id]/[filename]": "pages/api/images/[id]/[filename].js",
-  "/api/infos": "pages/api/infos.js"
+  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js"
 }

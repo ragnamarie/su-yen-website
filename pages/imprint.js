@@ -19,7 +19,7 @@ export default function ImprintPage() {
         <b>Impressum</b>
         <br></br>
         <br></br>
-        Su-Yen Hennings<br></br> Dresdener Straße 119<br></br> 10999 Berlin
+        Su-Yen Hennings<br></br>hello@su-yen.com
         <br></br>
         <br></br>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:<br></br>
         Su-Yen Hennings<br></br>
@@ -42,7 +42,7 @@ export default function ImprintPage() {
         <br></br>1. Verantwortlichee für die Datenverarbeitung Verantwortlicher
         im Sinne der Datenschutz-Grundverordnung (DSGVO) ist: <br></br>
         <br></br>
-        Su-Yen Hennings<br></br> Dresdener Straße 119<br></br> 10999 Berlin
+        Su-Yen Hennings<br></br>Berlin
         <br></br>
         <br></br>2. Erhebung und Verarbeitung von personenbezogenen Daten{" "}
         <br></br>
