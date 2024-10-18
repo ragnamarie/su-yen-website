@@ -19,7 +19,7 @@ export default function ImprintPage() {
         <b>Impressum</b>
         <br></br>
         <br></br>
-        Su-Yen Hennings<br></br>Berlin <br></br>hello@su-yen.com
+        Su-Yen Hennings<br></br>hello@su-yen.com
         <br></br>
         <br></br>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:<br></br>
         Su-Yen Hennings<br></br>
