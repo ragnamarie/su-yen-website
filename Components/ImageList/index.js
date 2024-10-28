@@ -9,6 +9,16 @@ export function ImageList({ images }) {
           <ImageComponent image={image} key={image._id} />
         ))) ||
         "No images"}
+      {/* <video
+        id="sampleMovie"
+        width="640"
+        height="360"
+        preload
+        autoPlay
+        controls
+      >
+        <source src="/dog.mp4" />
+      </video> */}
     </div>
   );
 }
