@@ -23,6 +23,10 @@ export default function WorksPage() {
       >
         {session && <ImageUploader />}
         <ImageList images={images} />
+        <img
+          src="https://su-yen.com/images/IMG_2941.jpg"
+          alt="Example Image"
+        ></img>
       </div>
     </>
   );
