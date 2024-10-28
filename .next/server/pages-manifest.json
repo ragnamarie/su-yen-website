@@ -2,5 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/imprint": "pages/imprint.js"
+  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
+  "/imprint": "pages/imprint.js",
+  "/": "pages/index.js"
 }
