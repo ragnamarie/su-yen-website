@@ -5,6 +5,7 @@ export default function HomePage() {
   return (
     <>
       <Phone />
+      <h2> hi welc0me friends and hoes</h2>
     </>
   );
 }
